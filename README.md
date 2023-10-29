@@ -13,4 +13,4 @@
    		- T-SQL (SQL_SERVER);<br>
      		- Java Database Connectivity (JDBC) API.<br><br>
 	front-end: <br>
- 		   - HTML5X<br>
+ 		   - HTML5<br>
