@@ -12,5 +12,7 @@
  		- JAVA;<br>
    		- T-SQL (SQL_SERVER);<br>
      		- Java Database Connectivity (JDBC) API.<br><br>
+       		- Spring framework
 	front-end: <br>
- 		   - HTML5<br>
+ 		- HTML5<br>
+      		- JavaScript
