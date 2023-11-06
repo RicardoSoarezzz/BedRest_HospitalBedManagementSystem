@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-    /* Center the header and the form */
-    header {
-        text-align: center;
-    }
-    .w3-half {
-        margin: 0 auto;
-    }
-    .w3-container {
-        text-align: center;
-    }
-</style>
+<head>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Center the header and the form */
+        header {
+            text-align: center;
+        }
+        .w3-half {
+            margin: 0 auto;
+        }
+
+        .w3-image-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .w3-image-container img {
+            max-width: 100%; /* Set a maximum width for the image */
+            height: auto; /* Allow the height to adjust proportionally */
+        }
+    </style>
+</head>
 <body>
 
-<header class="w3-container w3-teal">
-    <h1>Login</h1>
+<header class="w3-container w3-light-blue">
+    <h1>BedRest</h1>
+    <h2>Login</h2>
 </header>
 
 <div class="w3-container w3-half w3-margin-top">
-
-    <form class="w3-container w3-card-4" >
-
+    <form class="w3-container w3-card-4">
         <p>
             <input class="w3-input" type="text" style="width:90%" required>
-            <label>Name</label></p>
+            <label>Name</label>
+        </p>
         <p>
             <input class="w3-input" type="password" style="width:90%" required>
-            <label>Password</label></p>
-
-        <p>
-            <input class="w3-radio" type="radio" name="gender" value="male" checked>
-            <label>Male</label></p>
-
-        <p>
-            <input class="w3-radio" type="radio" name="gender" value="female">
-            <label>Female</label></p>
-
+            <label>Password</label>
+        </p>
         <p>
             <input id="milk" class="w3-check" type="checkbox" checked="checked">
-            <label>Stay logged in</label></p>
-
+            <label>Stay logged in</label>
+        </p>
         <p>
-            <button class="w3-button w3-section w3-teal w3-ripple"> Log in </button></p>
-
+            <button class="w3-button w3-section w3-light-blue w3-ripple"> Log in </button>
+        </p>
     </form>
+</div>
 
+<div class="w3-container w3-half w3-margin-top w3-image-container">
+    <img src="https://s3-prod.modernhealthcare.com/s3fs-public/pressure-injuries-bed.png" alt="Image">
 </div>
 
 </body>
