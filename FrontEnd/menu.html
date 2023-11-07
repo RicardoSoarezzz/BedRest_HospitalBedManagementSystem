@@ -21,7 +21,10 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTut')">DEPARTMENTS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuRef')">BED MANAGEMENT</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTest')">TEST</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
     </div>
+
+
 </div>
 
 <!-- Sidebar -->
@@ -91,6 +94,12 @@
       document.getElementById("menuTest").style.display = "none";
       document.getElementById(name).style.display = "block";
       w3-open();
+    }
+
+        function confirmLogout() {
+        if (confirm("Are you sure you want to log out?")) {
+            window.location.href = "Login.html"; // Redirect to the login page
+        }
     }
 </script>
 
