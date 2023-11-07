@@ -21,18 +21,21 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTut')">DEPARTMENTS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuRef')">BED MANAGEMENT</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTest')">TEST</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuStats')">STATISTICS</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuUser')">USER SETTINGS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
     </div>
 
 
 </div>
 
-<!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-light-grey"  style="z-index:3;width:270px" id="mySidebar">
     <div class="w3-bar w3-hide-large w3-large">
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTut')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">DEPARTMENTS</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuRef')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTest')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuStats')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuUser')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
     </div>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-right w3-xlarge w3-hide-large" title="Close Menu">×</a>
     <div id="menuTut" class="myMenu">
@@ -48,10 +51,27 @@
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
-        <a class="w3-bar-item w3-button" href='/tags/default.asp'>1</a>
-        <a class="w3-bar-item w3-button" href='/colors/default.asp'>2</a>
-        <a class="w3-bar-item w3-button" href='/cssref/default.asp'>3</a>
-        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>4</a>
+        <a class="w3-bar-item w3-button" href='/tags/default.asp'>Add Bed</a>
+        <a class="w3-bar-item w3-button" href='/colors/default.asp'>Remove Bed</a>
+        <a class="w3-bar-item w3-button" href='/cssref/default.asp'>Update Bed Status</a>
+        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Update Bed Section</a>
+        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Reserve Bed</a>
+        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Add Support Bed</a>
+    </div>
+    <div id="menuUser" class="myMenu" style="display:none">
+        <div class="w3-container">
+            <h3>USER SETTINGS</h3>
+        </div>
+        <a class="w3-bar-item w3-button" href='/tags/default.asp'>Update User Information</a>
+        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Delete data from System</a>
+
+    </div>
+    <div id="menuStats" class="myMenu" style="display:none">
+        <div class="w3-container">
+            <h3>STATISTICS</h3>
+        </div>
+        <a class="w3-bar-item w3-button" href='/tags/default.asp'>General Stats</a>
+        <a class="w3-bar-item w3-button" href='/colors/default.asp'>Bed Stats</a>
 
     </div>
     <div id="menuTest" class="myMenu" style="display:none">
@@ -72,6 +92,11 @@
 
     <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
             Window Opens Here
+            <br>
+            -<br>
+            -<br>
+            Page Functionallity
+            Change when pressing a different option on the side bar
     </div>
 
 </div>
@@ -92,6 +117,8 @@
       document.getElementById("menuTut").style.display = "none";
       document.getElementById("menuRef").style.display = "none";
       document.getElementById("menuTest").style.display = "none";
+      document.getElementById("menuStats").style.display = "none";
+      document.getElementById("menuUser").style.display = "none";
       document.getElementById(name).style.display = "block";
       w3-open();
     }
