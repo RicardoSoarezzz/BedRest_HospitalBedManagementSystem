@@ -20,14 +20,16 @@
         <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme w3-padding-16" href="javascript:void(0)" onclick="w3_open()">☰</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTut')">DEPARTMENTS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuRef')">BED MANAGEMENT</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTest')">TEST</a>
     </div>
 </div>
 
 <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" style="z-index:3;width:270px" id="mySidebar">
+<div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-light-grey"  style="z-index:3;width:270px" id="mySidebar">
     <div class="w3-bar w3-hide-large w3-large">
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTut')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">DEPARTMENTS</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuRef')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuTest')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
     </div>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-right w3-xlarge w3-hide-large" title="Close Menu">×</a>
     <div id="menuTut" class="myMenu">
@@ -49,6 +51,16 @@
         <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>4</a>
 
     </div>
+    <div id="menuTest" class="myMenu" style="display:none">
+        <div class="w3-container">
+            <h3>TEST</h3>
+        </div>
+        <a class="w3-bar-item w3-button" href='/tags/default.asp'>this</a>
+        <a class="w3-bar-item w3-button" href='/colors/default.asp'>is</a>
+        <a class="w3-bar-item w3-button" href='/cssref/default.asp'>a</a>
+        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>test</a>
+
+    </div>
 </div>
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -56,15 +68,8 @@
 <div class="w3-main w3-container" style="margin-left:270px;margin-top:117px;">
 
     <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
-
+            Window Opens Here
     </div>
-
-
-    <footer class="w3-panel w3-padding-32 w3-card-4 w3-light-grey w3-center w3-opacity">
-        <p><nav>
-        <a href="https://www.instagram.com/ricardo_soarezz/" target="_blank">INSTAGRAM</a>
-    </nav></p>
-    </footer>
 
 </div>
 
@@ -83,6 +88,7 @@
     function w3_show_nav(name) {
       document.getElementById("menuTut").style.display = "none";
       document.getElementById("menuRef").style.display = "none";
+      document.getElementById("menuTest").style.display = "none";
       document.getElementById(name).style.display = "block";
       w3-open();
     }
