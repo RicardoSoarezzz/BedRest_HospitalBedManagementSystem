@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>MENU</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -9,6 +9,7 @@
     .w3-code{border-left:4px solid #4CAF50}
     .myMenu {margin-bottom:150px}
 </style>
+<script src="index.js"> </script>
 <body>
 
 <div class="w3-top">
@@ -42,46 +43,46 @@
         <div class="w3-container">
             <h3>DEPARTMENTS</h3>
         </div>
-        <a class="w3-bar-item w3-button" href="/html/default.asp">1</a>
-        <a class="w3-bar-item w3-button" href="/css/default.asp">2</a>
-        <a class="w3-bar-item w3-button" href="/w3css/default.asp">3</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENTS","depart.html")'>1</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENTS","depart.html")'>2</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENTS","depart.html")'>3</a>
 
     </div>
     <div id="menuRef" class="myMenu" style="display:none">
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
-        <a class="w3-bar-item w3-button" href='/tags/default.asp'>Add Bed</a>
-        <a class="w3-bar-item w3-button" href='/colors/default.asp'>Remove Bed</a>
-        <a class="w3-bar-item w3-button" href='/cssref/default.asp'>Update Bed Status</a>
-        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Update Bed Section</a>
-        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Reserve Bed</a>
-        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Add Support Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Add Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Remove Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Update Bed Status</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Update Bed Section</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Reserve Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Add Support Bed</a>
     </div>
     <div id="menuUser" class="myMenu" style="display:none">
         <div class="w3-container">
             <h3>USER SETTINGS</h3>
         </div>
-        <a class="w3-bar-item w3-button" href='/tags/default.asp'>Update User Information</a>
-        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>Delete data from System</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER_SETTINGS","user.html")'>Update User Information</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER_SETTINGS","user.html")'>Delete data from System</a>
 
     </div>
     <div id="menuStats" class="myMenu" style="display:none">
         <div class="w3-container">
             <h3>STATISTICS</h3>
         </div>
-        <a class="w3-bar-item w3-button" href='/tags/default.asp'>General Stats</a>
-        <a class="w3-bar-item w3-button" href='/colors/default.asp'>Bed Stats</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","stas.html")'>General Stats</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","stas.html")'>Bed Stats</a>
 
     </div>
     <div id="menuTest" class="myMenu" style="display:none">
         <div class="w3-container">
             <h3>TEST</h3>
         </div>
-        <a class="w3-bar-item w3-button" href='/tags/default.asp'>this</a>
-        <a class="w3-bar-item w3-button" href='/colors/default.asp'>is</a>
-        <a class="w3-bar-item w3-button" href='/cssref/default.asp'>a</a>
-        <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>test</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>this</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>is</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>a</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>test</a>
 
     </div>
 </div>
@@ -90,7 +91,7 @@
 
 <div class="w3-main w3-container" style="margin-left:270px;margin-top:117px;">
 
-    <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
+    <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey div" id="div">
             Window Opens Here
             <br>
             -<br>
@@ -128,6 +129,8 @@
             window.location.href = "Login.html"; // Redirect to the login page
         }
     }
+
+
 </script>
 
 <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
