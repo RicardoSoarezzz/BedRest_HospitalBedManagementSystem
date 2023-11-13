@@ -17,5 +17,5 @@
  		- HTML5<br>
       		- JavaScript
 
-Task 01 (Creation of database) - Done by Tiago Ferreira and Tiago Brandão
+ESFF-39 (Creation of database) - Done by Tiago Ferreira and Tiago Brandão
 ESFF-38 - Criar interface básica - Ricardo Soares e Jorge Cardoso
