@@ -16,3 +16,5 @@
 	front-end: <br>
  		- HTML5<br>
       		- JavaScript
+
+Task 01 (Creation of database) - Done by Tiago Ferreira and Tiago Brandão
