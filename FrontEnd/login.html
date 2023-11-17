@@ -19,6 +19,7 @@
       }
 
     </style>
+    <script src="JavaScript/login.js"></script>
 </head>
 <body>
 
@@ -27,18 +28,24 @@
     <h2>Login</h2>
 </header>
 <div class="w3-container w3-center w3-half w3-margin-top w3-display-middle" style="width:45%">
-    <form class="w3-container w3-card-4"  action="Menu.html">
+    <form class="w3-container w3-card-4" onsubmit="return validate()" id="loginForm">
         <p>
-            <input class="w3-input w3-border w3-round-large w3-center w3-animate-input" type="text" style="width:50%" placeholder="username" required>
+            <label>
+                <input class="w3-input w3-border w3-round-large w3-center w3-animate-input" type="text" style="width:50%"
+                       placeholder="username" required name="username" id="username">
+            </label>
         </p>
         <p>
-            <input class="w3-input w3-border w3-round-large w3-center w3-animate-input" type="password" style="width:50%" placeholder="password" required>
+            <label>
+                <input class="w3-input w3-border w3-round-large w3-center w3-animate-input" type="password" style="width:50%"
+                       placeholder="password" required name="password" id="password">
+            </label>
         </p>
         <p>
-            <button class="w3-btn w3-light-blue w3-round-large"> Log in </button>
+            <button class="w3-btn w3-light-blue w3-round-large" name="submitButton" id="submitButton"> Log in </button>
         </p>
         <p>
-            <input id="milk" class="w3-check" type="checkbox" checked="checked">
+            <label for="stayLog"></label><input id="stayLog" class="w3-check" type="checkbox" checked="checked">
             <label>Stay logged in</label>
         </p>
     </form>
