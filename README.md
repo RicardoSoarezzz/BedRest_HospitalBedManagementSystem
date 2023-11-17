@@ -16,3 +16,7 @@
 	front-end: <br>
  		- HTML5<br>
       		- JavaScript
+
+ESFF-39 (Creation of database) - Done by Tiago Ferreira and Tiago Brandão
+ESFF-38 - Criar interface básica - Ricardo Soares e Jorge Cardoso
+ESFF-44 - Desenho de Interface - Ricardo Soares e Jorge Cardoso
