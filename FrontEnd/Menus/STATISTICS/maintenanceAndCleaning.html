@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Statistics and Reports</title>
+    <title>Maintenance and Cleaning</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -16,35 +16,30 @@
 <body>
 
 <div class="w3-container w3-padding-16">
-    <h2>Statistics and Reports</h2>
-    <button class="w3-btn w3-theme" onclick="openTab('OccupiedBeds')">Occupied Beds</button>
-    <button class="w3-btn w3-theme" onclick="openTab('VacantBeds')">Vacant Beds</button>
-    <button class="w3-btn w3-theme" onclick="openTab('OccupancyRate')">Occupancy Rate</button>
-    <button class="w3-btn w3-theme" onclick="openTab('AdmissionToInternmentTime')">Admission to Internment Time</button>
-    <button class="w3-btn w3-theme" onclick="openTab('OccupationTime')">Occupation Time</button>
-    <button class="w3-btn w3-theme" onclick="openTab('DischargeTime')">Discharge Time</button>
+    <h2>Maintenance and Cleaning</h2>
     <button class="w3-btn w3-theme" onclick="openTab('CleaningTime')">Cleaning Time per Bed</button>
     <button class="w3-btn w3-theme" onclick="openTab('MaintenanceTime')">Maintenance Time per Bed</button>
     <button class="w3-btn w3-theme" onclick="openTab('BedLinenUsage')">Bed Linen Usage</button>
-    <button class="w3-btn w3-theme" onclick="openTab('DailyMeals')">Daily Meals</button>
 </div>
 
-<!-- Occupied Beds Report Tab -->
-<div id="OccupiedBeds" class="w3-container report-tab">
-    <h3>Occupied Beds Report</h3>
+<div id="BedLinenUsage" class="w3-container report-tab" style="display:none">
+    <h3>Bed Linen Usage Report</h3>
     <!-- Add content and elements specific to the Occupied Beds report here -->
     <button class="w3-btn w3-theme" onclick="printReport('OccupiedBeds')">Print PDF</button>
 </div>
 
-<!-- Vacant Beds Report Tab -->
-<div id="VacantBeds" class="w3-container report-tab" style="display:none">
-    <h3>Vacant Beds Report</h3>
+<div id="CleaningTime" class="w3-container report-tab" style="display:none">
+    <h3>Cleaning Time Report</h3>
+    <!-- Add content and elements specific to the Occupied Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('OccupiedBeds')">Print PDF</button>
+</div>
+
+
+<div id="MaintenanceTime" class="w3-container report-tab" style="display:none">
+    <h3>Maintenance Time Report</h3>
     <!-- Add content and elements specific to the Vacant Beds report here -->
     <button class="w3-btn w3-theme" onclick="printReport('VacantBeds')">Print PDF</button>
 </div>
-
-<!-- Occupancy Rate Report Tab -->
-<!-- Add more report tabs as needed -->
 
 <script>
     function openTab(tabName) {

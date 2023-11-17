@@ -21,8 +21,8 @@
         <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme w3-padding-16" href="javascript:void(0)" onclick="w3_open()">☰</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTut')">DEPARTMENTS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuRef')">BED MANAGEMENT</a>
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTest')">TEST</a>
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuStats')">STATISTICS</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTest')">REPORTS</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuStats')">STATISTICS AND REPORTS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuUser')">USER SETTINGS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
     </div>
@@ -34,9 +34,9 @@
     <div class="w3-bar w3-hide-large w3-large">
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTut')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">DEPARTMENTS</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuRef')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuTest')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuStats')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuUser')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuTest')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">USER SETTINGS</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuStats')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">STATISTICS AND REPORTS</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuUser')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">REPORTS</a>
     </div>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-right w3-xlarge w3-hide-large" title="Close Menu">×</a>
     <div id="menuTut" class="myMenu">
@@ -69,20 +69,23 @@
     </div>
     <div id="menuStats" class="myMenu" style="display:none">
         <div class="w3-container">
-            <h3>STATISTICS</h3>
+            <h3>STATISTICS AND REPORTS</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","stas.html")'>General Stats</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","stas.html")'>Bed Stats</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","occupation.html")'>Occupation</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","maintenanceAndCleaning.html")'>Maintenance and Cleaning</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","meals.html")'>Meals</a>
+
+
 
     </div>
     <div id="menuTest" class="myMenu" style="display:none">
         <div class="w3-container">
-            <h3>TEST</h3>
+            <h3>STOCKS</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>this</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>is</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>a</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>test</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STOCKS","add.html")'>Add Stocks</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STOCKS","update.html")'>Update Stocks</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STOCKS","remove.html")'>Remove Stocks</a>
+
 
     </div>
 </div>
