@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        /* Center the header and the form */
-        header {
-            text-align: center;
-        }
-        .w3-half {
-            margin: 0 auto;
-        }
 
-        .w3-image-container {
-            display: flex;
-            align-items: center;
-        }
+      header {
+          text-align: center;
+      }
 
-        .w3-image-container img {
-            max-width: 100%; /* Set a maximum width for the image */
-            height: auto; /* Allow the height to adjust proportionally */
-        }
+      .w3-half {
+          width: 50%;
+      }
+
+      .w3-center {
+          margin: auto;
+      }
+
     </style>
 </head>
 <body>
@@ -30,30 +26,24 @@
     <h1>BedRest</h1>
     <h2>Login</h2>
 </header>
-
-<div class="w3-container w3-half w3-margin-top">
+<div class="w3-container w3-center w3-half w3-margin-top w3-display-middle" style="width:45%">
     <form class="w3-container w3-card-4"  action="Menu.html">
         <p>
-            <input class="w3-input" type="text" style="width:90%" required>
-            <label>Number</label>
+            <input class="w3-input w3-border w3-round-large w3-center w3-animate-input" type="text" style="width:50%" placeholder="username" required>
         </p>
         <p>
-            <input class="w3-input" type="password" style="width:90%" required>
-            <label>Password</label>
+            <input class="w3-input w3-border w3-round-large w3-center w3-animate-input" type="password" style="width:50%" placeholder="password" required>
+        </p>
+        <p>
+            <button class="w3-btn w3-light-blue w3-round-large"> Log in </button>
         </p>
         <p>
             <input id="milk" class="w3-check" type="checkbox" checked="checked">
             <label>Stay logged in</label>
         </p>
-        <p>
-            <button class="w3-button w3-section w3-light-blue w3-ripple"> Log in </button>
-        </p>
     </form>
 </div>
 
-<div class="w3-container w3-half w3-margin-top w3-image-container">
-    <img src="https://s3-prod.modernhealthcare.com/s3fs-public/pressure-injuries-bed.png" alt="Image">
-</div>
 
 </body>
 </html>
