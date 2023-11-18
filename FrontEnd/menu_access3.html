@@ -21,7 +21,6 @@
         <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme w3-padding-16" href="javascript:void(0)" onclick="w3_open()">☰</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTut')">DEPARTMENTS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuRef')">BED MANAGEMENT</a>
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTest')">TEST</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuStats')">STATISTICS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuUser')">USER SETTINGS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
@@ -36,55 +35,46 @@
         <a href="javascript:void(0)" onclick="w3_show_nav('menuRef')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTest')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuStats')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuUser')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">TEST</a>
     </div>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-right w3-xlarge w3-hide-large" title="Close Menu">×</a>
     <div id="menuTut" class="myMenu">
         <div class="w3-container">
             <h3>DEPARTMENTS</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENTS","depart.html")'>1</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENTS","depart.html")'>2</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENTS","depart.html")'>3</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENT","department.html")'>1</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENT","department.html")'>2</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","DEPARTMENT","department.html")'>3</a>
 
     </div>
     <div id="menuRef" class="myMenu" style="display:none">
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Add Bed</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Remove Bed</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Update Bed Status</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Update Bed Section</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Reserve Bed</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED_MANAGEMENT","bed.html")'>Add Support Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Add Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Remove Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Update Bed Status</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Update Bed Section</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Reserve Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Add Support Bed</a>
     </div>
     <div id="menuUser" class="myMenu" style="display:none">
         <div class="w3-container">
             <h3>USER SETTINGS</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER_SETTINGS","user.html")'>Update User Information</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER_SETTINGS","user.html")'>Delete data from System</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","user.html")'>Update User Information</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","user.html")'>Delete data from System</a>
 
     </div>
     <div id="menuStats" class="myMenu" style="display:none">
         <div class="w3-container">
-            <h3>STATISTICS</h3>
+            <h3>REPORTS</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","stats.html")'>General Stats</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STATISTICS","stats.html")'>Bed Stats</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","REPORT","occupation.html")'>Occupation</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","REPORT","maintenanceAndCleaning.html")'>Maintenance and Cleaning</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","REPORT","meals.html")'>Meals</a>
 
     </div>
-    <div id="menuTest" class="myMenu" style="display:none">
-        <div class="w3-container">
-            <h3>TEST</h3>
-        </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>this</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>is</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>a</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","TEST","teste.html")'>test</a>
 
-    </div>
 </div>
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -117,7 +107,6 @@
     function w3_show_nav(name) {
       document.getElementById("menuTut").style.display = "none";
       document.getElementById("menuRef").style.display = "none";
-      document.getElementById("menuTest").style.display = "none";
       document.getElementById("menuStats").style.display = "none";
       document.getElementById("menuUser").style.display = "none";
       document.getElementById(name).style.display = "block";
