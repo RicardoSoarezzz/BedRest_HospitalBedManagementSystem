@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Populate users dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getUsers', // Replace with the actual endpoint for getting users
+                success: function(users) {
+                    var userDropdown = $('#userIdToUpdateType');
+                    userDropdown.empty();
+                    userDropdown.append('<option value="" disabled selected>Select a user</option>');
+                    $.each(users, function(index, user) {
+                        userDropdown.append('<option value="' + user.id + '">' + user.name + '</option>');
+                    });
+                }
+            });
+
+            // Populate user types dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getUserTypes', // Replace with the actual endpoint for getting user types
+                success: function(userTypes) {
+                    var userTypeDropdown = $('#userTypeIdToUpdate');
+                    userTypeDropdown.empty();
+                    userTypeDropdown.append('<option value="" disabled selected>Select a user type</option>');
+                    $.each(userTypes, function(index, userType) {
+                        userTypeDropdown.append('<option value="' + userType.id + '">' + userType.name + '</option>');
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>User Management - Update User Type</h2>
+</div>
+
+<div id="UpdateUserType" class="w3-container user-tab">
+    <!-- Form for updating user type -->
+    <form action="/updateUserType" method="post">
+        <label for="userIdToUpdateType">Select User to Update Type:</label>
+        <select id="userIdToUpdateType"  name="userIdToUpdateType" required></select>
+        <br><br>
+        <label for="userTypeIdToUpdate">Select New User Type:</label>
+        <select id="userTypeIdToUpdate"  name="userTypeIdToUpdate" required></select>
+        <br><br>
+        <button type="submit"  class="w3-btn w3-theme">Update User Type</button>
+    </form>
+</div>
+
+</body>
+</html>
