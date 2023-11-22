@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Department Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Populate departments dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getDepartments',
+                success: function(departments) {
+                    var dropdown = $('#departmentIdToUpdate');
+                    dropdown.empty();
+                    dropdown.append('<option value="" disabled selected>Select a department</option>');
+                    $.each(departments, function(index, department) {
+                        dropdown.append('<option value="' + department.id + '">' + department.name + '</option>');
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Department Management - Update Department</h2>
+</div>
+
+<div id="UpdateDepartment" class="w3-container stock-tab">
+    <!-- Form for updating a department -->
+    <form>
+        <label for="departmentIdToUpdate">Select Department to Update:</label>
+        <select id="departmentIdToUpdate" name="departmentIdToUpdate" required></select>
+
+        <br><br>
+        <label for="newDepartmentName">New Department Name:</label>
+        <input type="text" id="newDepartmentName" class="w3-input w3-border w3-round-large w3-animate-input" name="newDepartmentName" placeholder="Enter new name, if applicable">
+        <br><br>
+        <label for="newDepartmentCapacity">New Department Capacity:</label>
+        <input id="newDepartmentCapacity" class="w3-input w3-border w3-round-large w3-animate-input" name="newDepartmentCapacity" placeholder="Enter new capacity, if applicable">
+
+
+        <br>
+        <button type="submit" class="w3-btn w3-theme">Update Department</button>
+    </form>
+</div>
+
+</body>
+</html>
