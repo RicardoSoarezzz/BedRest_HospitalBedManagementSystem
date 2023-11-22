@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Department Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Department Management - Add Department</h2>
+</div>
+
+<div id="AddDepartment" class="w3-container stock-tab">
+    <!-- Form for adding a new department -->
+    <form>
+        <label for="departmentName">Department Name:</label>
+        <input type="text" id="departmentName" class="w3-input w3-border w3-round-large w3-animate-input"  name="departmentName" required>
+        <br>
+        <br>
+        <label for="departmentCapacity">Department Capacity:</label>
+        <input type="number" id="departmentCapacity" class="w3-input w3-border w3-round-large w3-animate-input" name="departmentCapacity" required>
+
+        <br>
+        <button type="submit" class="w3-btn w3-theme">Add Department</button>
+    </form>
+</div>
+
+</body>
+</html>
