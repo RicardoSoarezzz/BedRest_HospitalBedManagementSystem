@@ -1,0 +1,25 @@
+===================STORED PROCEDURES===================
+Select Bed (all info ???)
+Select Bed (by department)
+Select Bed (by ward)
+Select Beds - (filter for each type)
+Delete bed
+Edit bed
+Select Departments (name - droplist)
+Delete department
+Edit department
+Select Wards (name - droplist)
+Delete ward
+Edit ward
+Select stocks
+Delete stock
+Edit stock
+Select users (all info ???)
+Select user - (filter for each type)
+Delete user
+Edit user
+Reports Generator (NEED TO DECIDE REPORTS TO GENERATE)
+
+===================CURSORS===================
+Bed table
+Ward table
