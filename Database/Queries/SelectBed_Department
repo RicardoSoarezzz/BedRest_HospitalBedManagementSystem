@@ -1,0 +1,4 @@
+@department
+
+SELECT * FROM BED
+WHERE
