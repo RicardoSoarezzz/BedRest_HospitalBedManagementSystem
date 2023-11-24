@@ -1,0 +1,3 @@
+SELECT W_name
+FROM Ward
+WHERE W_D_id = @department

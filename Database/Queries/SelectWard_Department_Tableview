@@ -1,0 +1,3 @@
+SELECT W_name, W_available, W_occupied, W_capacity
+FROM Ward
+WHERE W_D_id = @department

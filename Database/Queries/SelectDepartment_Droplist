@@ -1,0 +1,2 @@
+SELECT D_name
+FROM Department
