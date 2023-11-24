@@ -1,23 +1,25 @@
-===================STORED PROCEDURES===================
+===================QUERIES===================
 Select Bed (all info ???)
 Select Bed (by department)
 Select Bed (by ward)
 Select Beds - (filter for each type)
+Select Departments (name - droplist)
+Select Wards (name - droplist)
+Select users (all info ???)
+Select user - (filter for each type)
 Delete bed = deactivate
 Edit bed
-Select Departments (name - droplist)
 Delete department = deactivate
 Edit department
-Select Wards (name - droplist)
 Delete ward = deactivate
 Edit ward
 Select stocks
 Delete stock = deactivate
 Edit stock
-Select users (all info ???)
-Select user - (filter for each type)
 Delete user = deactivate
 Edit user
+
+===================STORED PROCEDURES===================
 Reports Generator (NEED TO DECIDE REPORTS TO GENERATE)
 
 ===================CURSORS===================
