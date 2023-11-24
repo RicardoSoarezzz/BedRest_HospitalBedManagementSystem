@@ -5,31 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
         .w3-theme {color:#fff !important;background-color:#00BFFF !important}
         .w3-btn {background-color:#4CAF50;margin-bottom:4px}
         .w3-code{border-left:4px solid #4CAF50}
         .myMenu {margin-bottom:150px}
     </style>
+    <script>
+        $(document).ready(function() {
+            // Populate stocks dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getStocks', // Replace with the actual endpoint for getting stocks
+                success: function(stocks) {
+                    var stockDropdown = $('#stockIdToUpdate');
+                    stockDropdown.empty();
+                    stockDropdown.append('<option value="" disabled selected>Select a stock</option>');
+                    $.each(stocks, function(index, stock) {
+                        stockDropdown.append('<option value="' + stock.id + '">' + stock.productName + ' - ' + stock.stockDate + '</option>');
+                    });
+                }
+            });
+
+            // Populate departments dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getDepartments', // Replace with the actual endpoint for getting departments
+                success: function(departments) {
+                    var departmentDropdown = $('#departmentIdToUpdate');
+                    departmentDropdown.empty();
+                    departmentDropdown.append('<option value="" disabled selected>Select a department</option>');
+                    $.each(departments, function(index, department) {
+                        departmentDropdown.append('<option value="' + department.id + '">' + department.name + '</option>');
+                    });
+                }
+            });
+
+            // Populate products dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getProducts', // Replace with the actual endpoint for getting products
+                success: function(products) {
+                    var productDropdown = $('#productIdToUpdate');
+                    productDropdown.empty();
+                    productDropdown.append('<option value="" disabled selected>Select a product</option>');
+                    $.each(products, function(index, product) {
+                        productDropdown.append('<option value="' + product.id + '">' + product.name + '</option>');
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
 <div class="w3-container w3-padding-16">
-    <h2>Stock Management - Update Stocks</h2>
+    <h2>Stock Management - Update Stock</h2>
 </div>
 
-
-
-<div id="UpdateStock" class="w3-container stock-tab" style="display:none">
-    <h3>Update Stock</h3>
+<div id="UpdateStock" class="w3-container stock-tab">
     <!-- Form for updating stock -->
-    <!-- You would need to add form fields and submit button here -->
-    <!-- Connect this form to your server-side script to handle database operations -->
+    <form action="/updateStock" method="post">
+        <label for="stockIdToUpdate">Select Stock to Update:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="stockIdToUpdate" name="stockIdToUpdate" required></select>
+        <br>
+        <br>
+        <label for="departmentIdToUpdate">Select New Department:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="departmentIdToUpdate" name="departmentIdToUpdate" required></select>
+        <br>
+        <br>
+        <label for="productIdToUpdate">Select New Product:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="productIdToUpdate" name="productIdToUpdate" required></select>
+        <br>
+        <br>
+        <label for="stockDateToUpdate">Update Date:</label>
+        <input  class="w3-input w3-border w3-round-large w3-animate-input" type="datetime-local" id="stockDateToUpdate" name="stockDateToUpdate" required>
+        <br>
+        <br>
+        <label for="stockQuantityToUpdate">Update Quantity:</label>
+        <input  class="w3-input w3-border w3-round-large w3-animate-input" type="number" id="stockQuantityToUpdate" name="stockQuantityToUpdate" required>
+        <br>
+        <br>
+        <label for="expectedStockToUpdate">Update Expected Stock:</label>
+        <input  class="w3-input w3-border w3-round-large w3-animate-input" type="number" id="expectedStockToUpdate" name="expectedStockToUpdate" required>
+        <br>
+        <button type="submit" class="w3-btn w3-theme" >Update Stock</button>
+    </form>
 </div>
-
-
-
-
 
 </body>
 </html>
