@@ -1,0 +1,9 @@
+GO
+CREATE PROCEDURE edit_bed_state @STATE_ID bigint
+AS
+BEGIN
+    UPDATE Bed
+    SET B_S_id = @STATE_ID
+    WHERE B_id = @BED_ID
+    --trigger to update records needed
+END
