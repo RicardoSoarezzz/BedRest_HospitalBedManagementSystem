@@ -1,0 +1,8 @@
+GO
+CREATE PROCEDURE get_users
+AS
+BEGIN
+    SELECT D_name, U_name, U_badge, U_mail
+    FROM dbo.User_Info INNER JOIN Department
+    ON U_D_id = D_id
+END
