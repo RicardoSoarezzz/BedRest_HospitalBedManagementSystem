@@ -1,5 +1,5 @@
 GO
-CREATE PROCEDURE edit_bed_state @STATE_ID bigint
+CREATE PROCEDURE edit_bed_state @BED_ID bigint, @STATE_ID bigint, @PROCESS_NUMBER nvarchar(10)
 AS
 BEGIN
     UPDATE Bed
