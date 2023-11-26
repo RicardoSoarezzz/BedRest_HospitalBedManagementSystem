@@ -1,0 +1,11 @@
+NEED A CURSOR TO GO ROW BY ROW IN USER TABLE
+
+GO
+CREATE PROCEDURE delete_user
+AS
+DECLARE @DAYS_TO_DELETE int = (SELECT Code FROM Standard_Information WHERE Designation = 'DAYS_TO_DELETE'), 
+@DEACTIVATION_DATE datetime = (SELECT U_id, U_name, U_mail, U_badge, U_deactivation FROM User_Info WHERE U_active = 0)
+BEGIN
+	DELETE User_Info
+	WHERE DATEADD(day, @DAYS_TO_DELETE, ) <= GETDATE()
+END

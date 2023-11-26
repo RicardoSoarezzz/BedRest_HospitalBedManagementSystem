@@ -1,5 +1,5 @@
 GO
-CREATE PROCEDURE get_beds_by_department @DEPARTMENT_ID bigint
+CREATE PROCEDURE get_beds_by_ward @WARD_ID bigint
 AS
 BEGIN
     SELECT cw.D_name, cw.W_name, B_id, B_processNum, S_designation, cw.CW_departureDate
@@ -9,6 +9,6 @@ BEGIN
             FROM Current_Ward INNER JOIN Ward
             ON CW_W_id = W_id INNER JOIN Department
             ON D_id = W_D_id
-            WHERE D_id = @DEPARTMENT_ID) AS cw
+            WHERE D_id = @WARD_ID) AS cw
             ON B_id = cw.CW_B_id
 END
