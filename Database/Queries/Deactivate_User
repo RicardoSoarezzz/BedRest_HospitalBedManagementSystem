@@ -1,5 +1,5 @@
 GO
-CREATE PROCEDURE delete_user @USER_ID bigint
+CREATE PROCEDURE deactivate_user @USER_ID bigint
 BEGIN
     UPDATE User_Info
     SET U_active = 0
