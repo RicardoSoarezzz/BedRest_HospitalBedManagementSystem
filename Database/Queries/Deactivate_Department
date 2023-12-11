@@ -1,5 +1,5 @@
 GO
-CREATE PROCEDURE delete_department @DEPARTMENT_ID bigint
+CREATE PROCEDURE deactivate_department @DEPARTMENT_ID bigint
 BEGIN
     UPDATE Department
     SET D_active = 0

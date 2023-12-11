@@ -1,5 +1,5 @@
 GO
-CREATE PROCEDURE delete_product @PRODUCT_ID bigint
+CREATE PROCEDURE deactivate_product @PRODUCT_ID bigint
 BEGIN
     UPDATE Product
     SET P_active = 0
