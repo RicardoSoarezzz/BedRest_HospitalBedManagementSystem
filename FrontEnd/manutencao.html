@@ -18,9 +18,8 @@
         <div class="w3-half w3-margin-top w3-wide w3-hide-medium w3-hide-small"><div class="w3-right">Bed Management System for Hospitals</div></div>
     </div>
     <div class="w3-bar w3-theme w3-large" style="z-index:4;">
-        <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme w3-padding-16" href="javascript:void(0)" onclick="w3_open()">☰</a>
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuBed')">BED VIEW</a>
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuStock')">STOCK</a>
+        <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme w3-padding-16" href="javascript:void(0)" onclick="w3_open()">-</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuRef')">BED MANAGEMENT</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
     </div>
 
@@ -29,25 +28,17 @@
 
 <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-light-grey"  style="z-index:3;width:270px" id="mySidebar">
     <div class="w3-bar w3-hide-large w3-large">
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuBed')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED VIEW</a>
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuStock')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">STOCK</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuRef')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
     </div>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-right w3-xlarge w3-hide-large" title="Close Menu">×</a>
-    <div id="menuBed" class="myMenu">
-        <div class="w3-container">
-            <h3>BED VIEW</h3>
-        </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>FILTER</a>
-    </div>
-    <div id="menuStock" class="myMenu" style="display:none">
-        <div class="w3-container">
-            <h3>STOCK</h3>
-        </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STOCKS","add.html")'>Add</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STOCKS","remove.html")'>Remove</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","STOCKS","Update.html")'>Update</a>
 
+    <div id="menuRef" class="myMenu">
+        <div class="w3-container">
+            <h3>BED MANAGEMENT</h3>
+        </div>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Update Bed Status</a>
     </div>
+
 </div>
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -55,12 +46,9 @@
 <div class="w3-main w3-container" style="margin-left:270px;margin-top:117px;">
 
     <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey div" id="div">
-        Window Opens Here
+        <h1>BedREST</h1>
         <br>
-        -<br>
-        -<br>
-        Page Functionality
-        Change when pressing a different option on the side bar
+        <h4>The Hospital Bed Management System</h4>
     </div>
 
 </div>
@@ -78,8 +66,6 @@
     }
 
     function w3_show_nav(name) {
-      document.getElementById("menuBed").style.display = "none";
-      document.getElementById("menuStock").style.display = "none";
       document.getElementById(name).style.display = "block";
       w3-open();
     }
