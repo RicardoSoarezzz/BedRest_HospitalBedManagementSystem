@@ -1,0 +1,9 @@
+GO
+CREATE PROCEDURE delete_department
+AS
+DECLARE @DAYS_TO_DELETE int = CAST((SELECT Code FROM Standard_Information WHERE Designation = 'DAYS_TO_DELETE') AS int),
+@DEACTIVATION_DATE datetime = (SELECT D_deactivation FROM Department WHERE D_active = 0)
+BEGIN
+	DELETE Department
+	WHERE DATEADD(day, @DAYS_TO_DELETE, @DEACTIVATION_DATE) <= GETDATE()
+END

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stock Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Populate departments dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getDepartments', // Replace with the actual endpoint for getting departments
+                success: function(departments) {
+                    var departmentDropdown = $('#departmentId');
+                    departmentDropdown.empty();
+                    departmentDropdown.append('<option value="" disabled selected>Select a department</option>');
+                    $.each(departments, function(index, department) {
+                        departmentDropdown.append('<option value="' + department.id + '">' + department.name + '</option>');
+                    });
+                }
+            });
+
+            // Populate products dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getProducts', // Replace with the actual endpoint for getting products
+                success: function(products) {
+                    var productDropdown = $('#productId');
+                    productDropdown.empty();
+                    productDropdown.append('<option value="" disabled selected>Select a product</option>');
+                    $.each(products, function(index, product) {
+                        productDropdown.append('<option value="' + product.id + '">' + product.name + '</option>');
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Stock Management - Add Stock</h2>
+</div>
+
+<div id="AddStock" class="w3-container stock-tab">
+    <!-- Form for adding stock -->
+    <form action="/addStock" method="post">
+        <label for="departmentId">Select Department:</label>
+        <select id="departmentId" class="w3-input w3-border w3-round-large w3-animate-input" name="departmentId" required></select>
+        <br>
+        <br>
+        <label for="productId">Select Product:</label>
+        <select id="productId" class="w3-input w3-border w3-round-large w3-animate-input" name="productId" required></select>
+        <br>
+        <br>
+        <label for="stockDate">Date:</label>
+        <input type="datetime-local" class="w3-input w3-border w3-round-large w3-animate-input" id="stockDate" name="stockDate" required>
+        <br>
+        <br>
+        <label for="stockQuantity">Quantity:</label>
+        <input type="number" class="w3-input w3-border w3-round-large w3-animate-input" id="stockQuantity" name="stockQuantity" required>
+        <br>
+        <br>
+        <label for="expectedStock">Expected Stock:</label>
+        <input type="number" class="w3-input w3-border w3-round-large w3-animate-input" id="expectedStock" name="expectedStock" required>
+
+        <br>
+        <button type="submit" class="w3-btn w3-theme" >Add Stock</button>
+    </form>
+</div>
+
+</body>
+</html>

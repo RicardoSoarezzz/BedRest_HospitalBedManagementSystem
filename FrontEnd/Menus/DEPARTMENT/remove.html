@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Department Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Populate departments dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getDepartments',
+                success: function(departments) {
+                    var dropdown = $('#departmentIdToRemove');
+                    dropdown.empty();
+                    dropdown.append('<option value="" disabled selected>Select a department</option>');
+                    $.each(departments, function(index, department) {
+                        dropdown.append('<option value="' + department.id + '">' + department.name + '</option>');
+                    });
+                }
+            });
+        });
+
+        // Function to confirm department removal
+        function confirmRemove() {
+            var departmentName = $('#departmentIdToRemove option:selected').text();
+            return confirm('Are you sure you want to remove the department: ' + departmentName + '?');
+        }
+    </script>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Department Management - Remove Department</h2>
+</div>
+
+<div id="DeleteDepartment" class="w3-container stock-tab">
+    <!-- Form for deleting a department with confirmation pop-up -->
+    <form action="/removeDepartment" method="post" onsubmit="return confirmRemove()">
+        <label for="departmentIdToRemove">Select Department to Remove:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="departmentIdToRemove" name="departmentIdToRemove" required></select>
+
+        <!-- Add more form fields as needed -->
+        <br><br>
+        <button type="submit" class="w3-btn w3-theme">Remove Department</button>
+    </form>
+</div>
+
+</body>
+</html>

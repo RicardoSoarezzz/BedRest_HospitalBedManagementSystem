@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bed Occupation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="index2.js"> </script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Statistics and Reports</h2>
+    <button class="w3-btn w3-theme" onclick="openTab('OccupiedBeds')">Occupied Beds</button>
+    <button class="w3-btn w3-theme" onclick="openTab('VacantBeds')">Vacant Beds</button>
+    <button class="w3-btn w3-theme" onclick="openTab('OccupancyRate')">Occupancy Rate</button>
+    <button class="w3-btn w3-theme" onclick="openTab('AdmissionToInternmentTime')">Admission to Internment Time</button>
+    <button class="w3-btn w3-theme" onclick="openTab('OccupationTime')">Occupation Time</button>
+    <button class="w3-btn w3-theme" onclick="openTab('DischargeTime')">Discharge Time</button>
+</div>
+
+
+<div id="OccupiedBeds" class="w3-container report-tab" style="display:none">
+    <h3>Occupied Beds Report</h3>
+    <!-- Add content and elements specific to the Occupied Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('OccupiedBeds')">Print PDF</button>
+</div>
+
+<div id="VacantBeds" class="w3-container report-tab" style="display:none">
+    <h3>Vacant Beds Report</h3>
+    <!-- Add content and elements specific to the Vacant Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('VacantBeds')">Print PDF</button>
+</div>
+
+<div id="OccupancyRate" class="w3-container report-tab" style="display:none">
+    <h3>Occupancy Rate Report</h3>
+    3123123123
+    <!-- Add content and elements specific to the Occupied Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('OccupiedBeds')">Print PDF</button>
+</div>
+
+<div id="AdmissionToInternmentTime" class="w3-container report-tab" style="display:none">
+    <h3>Admission To Internment Time Report</h3>
+    <!-- Add content and elements specific to the Vacant Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('VacantBeds')">Print PDF</button>
+</div>
+
+<div id="OccupationTime" class="w3-container report-tab" style="display:none">
+    <h3>Occupation Time Report</h3>
+    <!-- Add content and elements specific to the Occupied Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('OccupiedBeds')">Print PDF</button>
+</div>
+
+<div id="DischargeTime" class="w3-container report-tab" style="display:none">
+    <h3>Discharge Time Report</h3>
+    <!-- Add content and elements specific to the Vacant Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('VacantBeds')">Print PDF</button>
+</div>
+
+
+
+
+</body>
+</html>

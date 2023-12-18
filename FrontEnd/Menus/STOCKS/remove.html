@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stock Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Populate stocks dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getStocks', // Replace with the actual endpoint for getting stocks
+                success: function(stocks) {
+                    var stockDropdown = $('#stockIdToRemove');
+                    stockDropdown.empty();
+                    stockDropdown.append('<option value="" disabled selected>Select a stock</option>');
+                    $.each(stocks, function(index, stock) {
+                        stockDropdown.append('<option value="' + stock.id + '">' + stock.productName + ' - ' + stock.stockDate + '</option>');
+                    });
+                }
+            });
+        });
+
+        // Function to confirm stock removal
+        function confirmRemoveStock() {
+            var stockInfo = $('#stockIdToRemove option:selected').text();
+            return confirm('Are you sure you want to remove the stock: ' + stockInfo + '?');
+        }
+    </script>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Stock Management - Remove Stock</h2>
+</div>
+
+<div id="DeleteStock" class="w3-container stock-tab">
+    <!-- Form for removing stock with confirmation pop-up -->
+    <form action="/removeStock" method="post" onsubmit="return confirmRemoveStock()">
+        <label for="stockIdToRemove">Select Stock to Remove:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="stockIdToRemove" name="stockIdToRemove" required></select>
+
+        <br>
+        <button type="submit" class="w3-btn w3-theme" >Remove Stock</button>
+    </form>
+</div>
+
+</body>
+</html>

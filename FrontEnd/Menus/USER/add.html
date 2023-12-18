@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Populate departments dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getDepartments', // Replace with the actual endpoint for getting departments
+                success: function(departments) {
+                    var departmentDropdown = $('#departmentId');
+                    departmentDropdown.empty();
+                    departmentDropdown.append('<option value="" disabled selected>Select a department</option>');
+                    $.each(departments, function(index, department) {
+                        departmentDropdown.append('<option value="' + department.id + '">' + department.name + '</option>');
+                    });
+                }
+            });
+
+            // Populate user types dropdown on page load
+            $.ajax({
+                type: 'GET',
+                url: '/getUserTypes', // Replace with the actual endpoint for getting user types
+                success: function(userTypes) {
+                    var userTypeDropdown = $('#userTypeId');
+                    userTypeDropdown.empty();
+                    userTypeDropdown.append('<option value="" disabled selected>Select a user type</option>');
+                    $.each(userTypes, function(index, userType) {
+                        userTypeDropdown.append('<option value="' + userType.id + '">' + userType.name + '</option>');
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>User Management - Add User</h2>
+</div>
+
+<div id="AddUser" class="w3-container user-tab">
+    <!-- Form for adding a user -->
+    <form action="/addUser" method="post">
+        <label for="departmentId">Select Department:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="departmentId" name="departmentId" required></select>
+        <br><br>
+        <label for="userTypeId">Select User Type:</label>
+        <select  class="w3-input w3-border w3-round-large w3-animate-input" id="userTypeId"  name="userTypeId" required></select>
+        <br><br>
+        <label for="userName">User Name:</label>
+        <input type="text"  class="w3-input w3-border w3-round-large w3-animate-input"  id="userName" name="userName" required>
+        <br><br>
+        <label for="userPassword">Password:</label>
+        <input type="password"  class="w3-input w3-border w3-round-large w3-animate-input"  id="userPassword" name="userPassword" required>
+        <br><br>
+        <label for="userBadge">User Badge:</label>
+        <input type="text"  class="w3-input w3-border w3-round-large w3-animate-input"  id="userBadge" name="userBadge">
+        <br><br>
+        <label for="userMail">User Mail:</label>
+        <input type="email"  class="w3-input w3-border w3-round-large w3-animate-input"  id="userMail" name="userMail">
+
+        <!-- Add more form fields as needed -->
+        <br><br>
+        <button type="submit"  class="w3-btn w3-theme">Add User</button>
+    </form>
+</div>
+
+</body>
+</html>

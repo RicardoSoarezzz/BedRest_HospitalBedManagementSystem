@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maintenance and Cleaning</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script src="index2.js"> </script>
+
+</head>
+<body>
+
+<div class="w3-container w3-padding-16">
+    <h2>Maintenance and Cleaning</h2>
+    <button class="w3-btn w3-theme" onclick="openTab('CleaningTime')">Cleaning Time per Bed</button>
+    <button class="w3-btn w3-theme" onclick="openTab('MaintenanceTime')">Maintenance Time per Bed</button>
+    <button class="w3-btn w3-theme" onclick="openTab('BedLinenUsage')">Bed Linen Usage</button>
+</div>
+
+<div id="BedLinenUsage" class="w3-container report-tab" style="display:none">
+    <h3>Bed Linen Usage Report</h3>
+    <!-- Add content and elements specific to the Occupied Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('BedLinenUsage')">Print PDF</button>
+</div>
+
+<div id="CleaningTime" class="w3-container report-tab" style="display:none">
+    <h3>Cleaning Time Report</h3>
+    <!-- Add content and elements specific to the Occupied Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('CleaningTime')">Print PDF</button>
+</div>
+
+
+<div id="MaintenanceTime" class="w3-container report-tab" style="display:none">
+    <h3>Maintenance Time Report</h3>
+    <!-- Add content and elements specific to the Vacant Beds report here -->
+    <button class="w3-btn w3-theme" onclick="printReport('MaintenanceTime')">Print PDF</button>
+</div>
+
+
+</body>
+</html>
