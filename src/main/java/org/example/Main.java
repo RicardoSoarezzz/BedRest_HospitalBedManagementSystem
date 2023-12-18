@@ -6,5 +6,6 @@ public class Main {
         System.out.println("HELLO WORLD");
         new ConnectionDB();
         String testeString = "ola";
+        System.out.println(testeString);
     }
 }

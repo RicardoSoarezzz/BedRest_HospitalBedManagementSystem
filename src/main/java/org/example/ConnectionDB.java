@@ -3,7 +3,7 @@ package org.example;
 import java.sql.*;
 public class ConnectionDB {
     // JDBC URL, username, and password of MySQL server
-    private static final String JDBC_URL = "jdbc:sqlserver://LAPTOP-JC\\JC_SQLEXPRESS:1434;database=QS_Gestao_Camas;integratedSecurity=true";
+    private static final String JDBC_URL = "jdbc:sqlserver://LAPTOP-JC\\JC_SQLEXPRESS:1434;database=QS_Gestao_Camas;integratedSecurity=true;encrypt=true;trustServerCertificate=true";
     private static final String USERNAME = "LAPTOP-JC\\jorge";
     public static CallableStatement callableStatement;
 
@@ -30,13 +30,13 @@ public class ConnectionDB {
             //callableStatement.setInt(2, 123);
 
             // Execute the stored procedure
-            System.out.println(callableStatement.execute());
+            //System.out.println(callableStatement.execute());
 
             // Get output parameters, if any
             // Example: int outputValue = callableStatement.getInt(3);
 
             // Close resources
-            callableStatement.close();
+            //callableStatement.close();
             connection.close();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
