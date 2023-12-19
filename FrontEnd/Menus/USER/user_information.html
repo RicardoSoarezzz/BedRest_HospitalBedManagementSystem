@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Table Example</title>
+</head>
+<body>
+<div id="table-container"></div>
+<script>
+    function getHtmlTable() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById("table-container").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open("GET", "/api/htmlTable", true);
+        xhr.send();
+    }
+
+    // Call the function when the page loads or whenever needed
+    getHtmlTable();
+</script>
+</body>
+</html>
+
