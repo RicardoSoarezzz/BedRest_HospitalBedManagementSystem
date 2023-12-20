@@ -3,8 +3,8 @@ package org.example;
 import java.sql.*;
 public class ConnectionDB {
     // JDBC URL, username, and password of MySQL server
-    private static final String JDBC_URL = "jdbc:sqlserver://LAPTOP-JC\\JC_SQLEXPRESS:1434;database=QS_Gestao_Camas;integratedSecurity=true";
-    private static final String USERNAME = "LAPTOP-JC\\jorge";
+    private static final String JDBC_URL = "jdbc:sqlserver://RICARDOSHUAWEI\\SQLEXPRESS01:1434;database=QS_Gestao_Camas;integratedSecurity=true;encrypt=true;trustServerCertificate=true";
+    private static final String USERNAME = "RicardoSHuawei\\geral";
     public static CallableStatement callableStatement;
 
     public ConnectionDB() {
