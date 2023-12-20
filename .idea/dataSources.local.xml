@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
   <component name="dataSourceStorageLocal" created-in="IU-232.10227.8">
     <data-source name="QS_Gestao_Camas@LAPTOP-JC" uuid="7b111326-e536-4669-baab-59b6a6a2da12">
-      <database-info product="Microsoft SQL Server" version="16.00.1105" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 12.2 for SQL Server" driver-version="12.2.0.0" dbms="MSSQL" exact-version="16.0.1105" exact-driver-version="12.2">
-=======
-  <component name="dataSourceStorageLocal" created-in="IU-233.11799.300">
-    <data-source name="Microsoft SQL Server" uuid="7b111326-e536-4669-baab-59b6a6a2da12">
-      <database-info product="Microsoft SQL Server" version="16.00.1000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 12.2 for SQL Server" driver-version="12.2.0.0" dbms="MSSQL" exact-version="16.0.1000" exact-driver-version="12.2">
->>>>>>> 3008651909ad618fec1cbf2511d761c93d33b466
-        <extra-name-characters>$#@</extra-name-characters>
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-<<<<<<< HEAD
-      <secret-storage>master_key</secret-storage>
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL" exact-version="0" />
       <auth-provider>ms-sso</auth-provider>
-      <schema-mapping>
-        <introspection-scope>
-          <node negative="1">
-            <node kind="database" qname="@">
-              <node kind="schema" qname="@" />
-            </node>
-            <node kind="database" qname="master" />
-=======
-      <auth-provider>ms-sso</auth-provider>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
->>>>>>> 3008651909ad618fec1cbf2511d761c93d33b466
-          </node>
-        </introspection-scope>
-      </schema-mapping>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
