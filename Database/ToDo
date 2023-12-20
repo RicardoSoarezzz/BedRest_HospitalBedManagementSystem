@@ -1,0 +1,36 @@
+===================QUERIES===================
+Select Bed (all info ???)
+Select Bed (by department)
+Select Bed (by ward)
+Select Beds - (filter for each type)
+Select Departments (name - droplist)
+Select Wards (name - droplist)
+Select users (all info ???)
+Select user - (filter for each type)
+Delete bed = deactivate
+Edit bed
+Delete department = deactivate
+Edit department
+Delete ward = deactivate
+Edit ward
+Select stocks
+Delete stock = deactivate
+Edit stock
+Delete user = deactivate
+Edit user
+
+===================STORED PROCEDURES===================
+Reports Generator (NEED TO DECIDE REPORTS TO GENERATE)
+
+===================CURSORS===================
+Bed table
+Ward table
+
+===================TRIGGERS===================
+deactivate user by 30 days until delete
+deactivate department by 30 days until delete
+deactivate ward by 30 days until delete
+deactivate bed by 30 days until delete
+Assure not assigning bed occupation to one already occupied/maintenance/cleaning
+Assure not taking more stock than the available
+Assure not assign more beds than those available

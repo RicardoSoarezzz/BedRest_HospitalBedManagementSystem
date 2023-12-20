@@ -1,0 +1,6 @@
+GO
+CREATE PROCEDURE get_states_names
+BEGIN
+    SELECT S_designation
+    FROM State
+END
