@@ -15,7 +15,7 @@ function validate() {
 
     if (username === adminUsername && password === adminPassword) {
         alert("Login successfully");
-        window.location = "menu_admin.html";
+        window.location.href = "/menuadmin";
         return false;
     } else if(username === managerUsername && password === managerPassword){
         alert("Login successfully");
