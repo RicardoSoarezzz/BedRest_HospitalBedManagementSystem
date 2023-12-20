@@ -4,7 +4,13 @@
     <data-source name="QS_Gestao_Camas@LAPTOP-JC" uuid="7b111326-e536-4669-baab-59b6a6a2da12">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL" exact-version="0" />
       <auth-provider>ms-sso</auth-provider>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" negative="1">
+            <node kind="schema" negative="1" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
