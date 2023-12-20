@@ -43,7 +43,7 @@ public class TableBuilder {
     }
 
     @RestController
-    @RequestMapping("/")
+    @RequestMapping("")
     public class YourController {
 
         @GetMapping("/htmlTable")
@@ -52,5 +52,9 @@ public class TableBuilder {
             System.out.println(table);
             return buildHtmlTable();
         }
+    }
+
+    public static void main(String []args){
+
     }
 }
