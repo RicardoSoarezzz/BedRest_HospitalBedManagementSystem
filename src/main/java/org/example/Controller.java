@@ -4,11 +4,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@SpringBootApplication
 @RestController
 public class Controller {
     @GetMapping("/hello")
     public String hello()
     {
-        return "Hello User, have a nice day.";
+        String table = new TableBuilder().buildHtmlTable();
+        System.out.println(table);
+        return table;
     }
 }
