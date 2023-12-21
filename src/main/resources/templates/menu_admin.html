@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>MENU</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-    .w3-theme {color:#fff !important;background-color:#00BFFF !important}
-    .w3-btn {background-color:#4CAF50;margin-bottom:4px}
-    .w3-code{border-left:4px solid #4CAF50}
-    .myMenu {margin-bottom:150px}
-</style>
-<script src="../../../../FrontEnd/JavaScript/index.js"> </script>
+<head>
+    <title>MENU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-theme {color:#fff !important;background-color:#00BFFF !important}
+        .w3-btn {background-color:#4CAF50;margin-bottom:4px}
+        .w3-code{border-left:4px solid #4CAF50}
+        .myMenu {margin-bottom:150px}
+    </style>
+    <script src="/js/index.js"> </script>
+</head>
 <body>
 
 <div class="w3-top">
@@ -26,8 +28,6 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuUser')">USER SETTINGS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
     </div>
-
-
 </div>
 
 <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-light-grey"  style="z-index:3;width:270px" id="mySidebar">
@@ -52,11 +52,11 @@
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","addBed.html")'>Add Bed</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","removeBed.html")'>Remove Bed</a>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","updateBed.html")'>Update Bed Status</a>
-        <!--<a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Update Bed Section</a>
-            <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Reserve Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Beds view</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","USER/addBed.html")'>Add Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","USER/removeBed.html")'>Remove Bed</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","USER/updateBed.html")'>Update Bed Status</a>
+        <!--    <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Reserve Bed</a>
             <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bed.html")'>Add Support Bed</a>-->
     </div>
     <div id="menuUser" class="myMenu" style="display:none">
@@ -114,18 +114,18 @@
     }
 
     function w3_show_nav(name) {
-      document.getElementById("menuTut").style.display = "none";
-      document.getElementById("menuRef").style.display = "none";
-      document.getElementById("menuTest").style.display = "none";
-      document.getElementById("menuStats").style.display = "none";
-      document.getElementById("menuUser").style.display = "none";
-      document.getElementById(name).style.display = "block";
-      w3-open();
+        document.getElementById("menuTut").style.display = "none";
+        document.getElementById("menuRef").style.display = "none";
+        document.getElementById("menuTest").style.display = "none";
+        document.getElementById("menuStats").style.display = "none";
+        document.getElementById("menuUser").style.display = "none";
+        document.getElementById(name).style.display = "block";
+        w3-open();
     }
 
-        function confirmLogout() {
+    function confirmLogout() {
         if (confirm("Are you sure you want to log out?")) {
-            window.location.href = "Login.html"; // Redirect to the login page
+            window.location = "/"; // Redirect to the login page
         }
     }
 
