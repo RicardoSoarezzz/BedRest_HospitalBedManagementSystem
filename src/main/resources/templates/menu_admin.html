@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>MENU</title>
+<title>bedREST</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
@@ -32,7 +32,7 @@
 <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-light-grey"  style="z-index:3;width:270px" id="mySidebar">
     <div class="w3-bar w3-hide-large w3-large">
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTut')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">DEPARTMENTS</a>
-        <a href="javascript:void(0)" onclick="w3_show_nav('menuRef')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
+        <a href="javascript:void(0)" onclick="w3_show_nav('menuBed')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">BED MANAGEMENT</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuTest')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">STOCKS</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuStats')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">REPORTS</a>
         <a href="javascript:void(0)" onclick="w3_show_nav('menuUser')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">USER SETTINGS</a>
@@ -51,6 +51,7 @@
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bedTable")'>Show beds</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","addBed")'>Add Bed</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","removeBed")'>Remove Bed</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","updateBed")'>Update Bed Status</a>
@@ -59,7 +60,7 @@
         <div class="w3-container">
             <h3>USER SETTINGS</h3>
         </div>
-
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","userTable")'>Show users</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","add")'>Add a new user</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","updateInfo")'>Update User Information</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","updateType")'>Update User Type</a>
@@ -128,6 +129,5 @@
 <script>
     w3CodeColor();
 </script>
-
 </body>
 </html>
