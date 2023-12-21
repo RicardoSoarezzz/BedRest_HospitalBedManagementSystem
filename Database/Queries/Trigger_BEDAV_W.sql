@@ -9,13 +9,13 @@ BEGIN
 
 	SET @WID = (SELECT W_id FROM inserted)
 
-	SET @WAV = (SELECT W_available FROM inserted WHERE W_id = @WID) 
+	SET @WAV = (SELECT W_capacity FROM inserted WHERE W_id = @WID)
 
 	SET @WOC = (SELECT W_occupied FROM inserted WHERE W_id = @WID) 
 
 	IF(@WAV	>= @WOC)
 	BEGIN
-	UPDATE WARD SET W_available = @WAV
+	UPDATE WARD SET W_capacity = @WAV
 	WHERE W_id = @WID 
 
 	UPDATE WARD SET W_occupied = @WOC
