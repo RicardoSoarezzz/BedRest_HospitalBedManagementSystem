@@ -1,5 +1,6 @@
 package org.example;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,6 +14,7 @@ public class MyController {
         return modelAndView;
     }
 
+    @RequestMapping("/Admin")
     public ModelAndView getMenuAdmin() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("menu_admin");
