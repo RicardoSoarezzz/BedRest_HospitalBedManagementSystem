@@ -14,6 +14,14 @@ public class MyController {
         return modelAndView;
     }
 
+    @RequestMapping("/login")
+    public ModelAndView getlogin() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
+
     @RequestMapping("/Admin")
     public ModelAndView getMenuAdmin() {
         ModelAndView modelAndView = new ModelAndView();
