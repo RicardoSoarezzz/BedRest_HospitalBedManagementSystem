@@ -1,0 +1,8 @@
+GO
+CREATE PROCEDURE edit_department @DEPARTMENT_ID bigint, @NAME nvarchar(50), @CAPACITY int
+AS
+BEGIN
+	UPDATE Department
+	SET D_capacity = @CAPACITY, D_name = @NAME
+	WHERE D_id = @DEPARTMENT_ID
+END
