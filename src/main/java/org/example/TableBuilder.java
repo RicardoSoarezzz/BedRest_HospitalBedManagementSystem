@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 public class TableBuilder {
     public static String buildHtmlTable() {
@@ -40,17 +37,5 @@ public class TableBuilder {
         }
 
         return htmlTable.toString();
-    }
-
-    @RestController
-    @RequestMapping("/")
-    public class YourController {
-
-        @GetMapping("/htmlTable")
-        public String getHtmlTable() {
-            String table = new TableBuilder().buildHtmlTable();
-            System.out.println(table);
-            return buildHtmlTable();
-        }
     }
 }
