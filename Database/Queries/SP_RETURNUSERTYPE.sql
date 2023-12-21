@@ -18,7 +18,7 @@ IF(@BADGE != NULL)
 		END
 	ELSE
 		ERROR9: 
-		raiserror('Nº9 - PASSWORD ERRADA',16,1)
+		raiserror('#9 - PASSWORD ERRADA',16,1)
 		return
 	END
 END
