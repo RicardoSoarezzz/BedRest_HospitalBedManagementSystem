@@ -6,6 +6,7 @@ function loadHtml(id, folder, filename) {
     let folderPath = folder ? `${folder}/` : ''; // Include folder path if specified
     let file = filename;
 
+
     if (file) {
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -20,8 +21,10 @@ function loadHtml(id, folder, filename) {
         }
 
 
+
         xhttp.open("GET", `${folderPath}${file}`, true); // Adjust the path here
         xhttp.send();
         return;
     }
+
 }

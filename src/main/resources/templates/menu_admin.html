@@ -11,7 +11,6 @@
 </style>
 <script src="/js/index.js"> </script>
 <script src="/js/logOut.js"> </script>
-
 <body>
 
 <div class="w3-top">
@@ -28,8 +27,6 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuUser')">USER SETTINGS</a>
         <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16 w3-right" href="#" onclick="confirmLogout()">LOG OUT</a>
     </div>
-
-
 </div>
 
 <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-light-grey"  style="z-index:3;width:270px" id="mySidebar">
@@ -57,7 +54,6 @@
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","addBed")'>Add Bed</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","removeBed")'>Remove Bed</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","updateBed")'>Update Bed Status</a>
-
     </div>
     <div id="menuUser" class="myMenu" style="display:none">
         <div class="w3-container">
@@ -115,15 +111,14 @@
     }
 
     function w3_show_nav(name) {
-      document.getElementById("menuTut").style.display = "none";
-      document.getElementById("menuRef").style.display = "none";
-      document.getElementById("menuTest").style.display = "none";
-      document.getElementById("menuStats").style.display = "none";
-      document.getElementById("menuUser").style.display = "none";
-      document.getElementById(name).style.display = "block";
-      w3-open();
+        document.getElementById("menuTut").style.display = "none";
+        document.getElementById("menuRef").style.display = "none";
+        document.getElementById("menuTest").style.display = "none";
+        document.getElementById("menuStats").style.display = "none";
+        document.getElementById("menuUser").style.display = "none";
+        document.getElementById(name).style.display = "block";
+        w3-open();
     }
-
 
 
 </script>

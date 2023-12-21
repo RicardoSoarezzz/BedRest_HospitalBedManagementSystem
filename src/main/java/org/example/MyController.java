@@ -1,6 +1,5 @@
 package org.example;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,24 +13,6 @@ public class MyController {
         return modelAndView;
     }
 
-    @RequestMapping("/login")
-    public ModelAndView getLogin() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
-        return modelAndView;
-    }
-
-
-    ////////////////////////////////////////////////////////////////////
-    //MENUS
-    @RequestMapping("/manutencao")
-    public ModelAndView getMenuManager() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("manutencao");
-        return modelAndView;
-    }
-
-    @RequestMapping("/menuadmin")
     public ModelAndView getMenuAdmin() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("menu_admin");
@@ -190,9 +171,11 @@ public class MyController {
     @GetMapping("/usersTable")
     public String hello()
     {
-        String table = new TableBuilder().buildHtmlTable();
-        System.out.println(table);
-        return table;
+        return TableBuilder.buildUserTable();
     }
-
+    @RequestMapping("/beds-table")
+    public String getBedsTable()
+    {
+        return TableBuilder.buildUserTable();
+    }
 }
