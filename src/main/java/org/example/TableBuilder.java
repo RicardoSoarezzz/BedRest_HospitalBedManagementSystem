@@ -6,42 +6,43 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TableBuilder {
-    static StringBuilder htmlTable = new StringBuilder("<table border='1'>");
-    public static String buildBedsTable(){
+
+    public static String buildBedsTable() {
+        String htmlTable = "<table class=\"w3-table-all w3-hoverable w3-centered\" border='1'>";
+        htmlTable += "<thead><tr>";
+        htmlTable += "<th>" + "Department" + "</th>";
+        htmlTable += "<th>" + "Ward" + "</th>";
+        htmlTable += "<th>" + "Bed ID" + "</th>";
+        htmlTable += "<th>" + "Process" + "</th>";
+        htmlTable += "<th>" + "State" + "</th>";
+        htmlTable += "<th>" + "Departure date" + "</th>";
+        htmlTable += "<th>" + "Arrival date" + "</th>";
+        htmlTable += "</tr></thead>";
 
         try (Connection connection = DatabaseConnection.connection();
              PreparedStatement statement = connection.prepareCall("{CALL get_beds}")) {
 
             ResultSet resultSet = statement.executeQuery();
             int columnCount = resultSet.getMetaData().getColumnCount();
-            // Build table header
-            htmlTable.append("<tr>");
-            htmlTable.append("<th>").append("Department").append("</th>");
-            htmlTable.append("<th>").append("Ward").append("</th>");
-            htmlTable.append("<th>").append("Bed ID").append("</th>");
-            htmlTable.append("<th>").append("Process").append("</th>");
-            htmlTable.append("<th>").append("State").append("</th>");
-            htmlTable.append("<th>").append("Departure date").append("</th>");
-            htmlTable.append("<th>").append("Arrival date").append("</th>");
-            htmlTable.append("</tr>");
 
-            // Build table rows
             while (resultSet.next()) {
-                htmlTable.append("<tr>");
+                htmlTable += "<tr>";
                 for (int i = 1; i <= columnCount; i++) {
-                    htmlTable.append("<td>").append(resultSet.getString(i)).append("</td>");
+                    htmlTable += "<td>" + resultSet.getString(i) + "</td>";
                 }
-                htmlTable.append("</tr>");
+                htmlTable += "</tr>";
             }
 
-            htmlTable.append("</table>");
+            htmlTable += "</table>";
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return htmlTable.toString();
+        return htmlTable;
     }
+
     public static String buildUserTable() {
+        String htmlTable = "<table class=\"w3-table-all w3-hoverable w3-centered\" border='1'>";
 
         try (Connection connection = DatabaseConnection.connection();
              PreparedStatement statement = connection.prepareCall("{CALL get_users}")) {
@@ -50,28 +51,28 @@ public class TableBuilder {
             int columnCount = resultSet.getMetaData().getColumnCount();
 
             // Build table header
-            htmlTable.append("<tr>");
-            htmlTable.append("<th>").append("Department").append("</th>");
-            htmlTable.append("<th>").append("Role").append("</th>");
-            htmlTable.append("<th>").append("User").append("</th>");
-            htmlTable.append("<th>").append("Badge number").append("</th>");
-            htmlTable.append("<th>").append("E-mail").append("</th>");
-            htmlTable.append("</tr>");
+            htmlTable += "<thead><tr>";
+            htmlTable += "<th>" + "Department" + "</th>";
+            htmlTable += "<th>" + "Role" + "</th>";
+            htmlTable += "<th>" + "User" + "</th>";
+            htmlTable += "<th>" + "Badge number" + "</th>";
+            htmlTable += "<th>" + "E-mail" + "</th>";
+            htmlTable += "</tr></thead>";
 
             // Build table rows
             while (resultSet.next()) {
-                htmlTable.append("<tr>");
+                htmlTable += "<tr>";
                 for (int i = 1; i <= columnCount; i++) {
-                    htmlTable.append("<td>").append(resultSet.getString(i)).append("</td>");
+                    htmlTable += "<td>" + resultSet.getString(i) + "</td>";
                 }
-                htmlTable.append("</tr>");
+                htmlTable += "</tr>";
             }
 
-            htmlTable.append("</table>");
+            htmlTable += "</table>";
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return htmlTable.toString();
+        return htmlTable;
     }
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="showUsers()">
+<div id="users_table"></div>
+</body>
+</html>
+
+<script>
+    function showUsers(){
+        fetch('/users-table')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('users_table').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            })
+    }
+</script>

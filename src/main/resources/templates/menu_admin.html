@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>MENU</title>
+<title>bedREST</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
@@ -51,6 +51,7 @@
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","bedTable")'>Show beds</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","addBed")'>Add Bed</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","removeBed")'>Remove Bed</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","updateBed")'>Update Bed Status</a>
@@ -59,7 +60,7 @@
         <div class="w3-container">
             <h3>USER SETTINGS</h3>
         </div>
-
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","userTable")'>Show users</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","add")'>Add a new user</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","updateInfo")'>Update User Information</a>
         <a class="w3-bar-item w3-button" onclick='loadHtml("div","USER","updateType")'>Update User Type</a>
@@ -128,6 +129,5 @@
 <script>
     w3CodeColor();
 </script>
-
 </body>
 </html>

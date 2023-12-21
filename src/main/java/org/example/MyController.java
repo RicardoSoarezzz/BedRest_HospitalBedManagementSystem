@@ -1,9 +1,16 @@
 package org.example;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+import java.util.Map;
 
 @RestController
 public class MyController {
@@ -14,6 +21,7 @@ public class MyController {
         return modelAndView;
     }
 
+
     @RequestMapping("/login")
     public ModelAndView getlogin() {
         ModelAndView modelAndView = new ModelAndView();
@@ -22,7 +30,8 @@ public class MyController {
     }
 
 
-    @RequestMapping("/Admin")
+    @RequestMapping("/menu-admin")
+
     public ModelAndView getMenuAdmin() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("menu_admin");
@@ -172,20 +181,14 @@ public class MyController {
     }
     ////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
-
-    @GetMapping("/usersTable")
+    @RequestMapping("/USER/userTable")
     public String hello()
     {
         return TableBuilder.buildUserTable();
     }
-    @RequestMapping("/beds-table")
+    @RequestMapping("/BED/bedTable")
     public String getBedsTable()
     {
-        return TableBuilder.buildUserTable();
+        return TableBuilder.buildBedsTable();
     }
 }

@@ -21,10 +21,8 @@ function loadHtml(id, folder, filename) {
         }
 
 
-
         xhttp.open("GET", `${folderPath}${file}`, true); // Adjust the path here
         xhttp.send();
         return;
     }
-
 }
