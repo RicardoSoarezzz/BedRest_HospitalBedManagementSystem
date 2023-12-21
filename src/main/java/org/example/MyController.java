@@ -1,7 +1,9 @@
 package org.example;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +21,17 @@ public class MyController {
         return modelAndView;
     }
 
+
+    @RequestMapping("/login")
+    public ModelAndView getlogin() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
+
     @RequestMapping("/menu-admin")
+
     public ModelAndView getMenuAdmin() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("menu_admin");
