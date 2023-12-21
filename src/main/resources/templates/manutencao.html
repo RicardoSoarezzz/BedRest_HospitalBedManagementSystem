@@ -9,7 +9,8 @@
     .w3-code{border-left:4px solid #4CAF50}
     .myMenu {margin-bottom:150px}
 </style>
-<script src="JavaScript/index.js"> </script>
+<script src="/js/index.js"> </script>
+<script src="/js/logOut.js"> </script>
 <body>
 
 <div class="w3-top">
@@ -36,7 +37,7 @@
         <div class="w3-container">
             <h3>BED MANAGEMENT</h3>
         </div>
-        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","updateBed.html")'>Update Bed Status</a>
+        <a class="w3-bar-item w3-button" onclick='loadHtml("div","BED","updateBed")'>Update Bed Status</a>
     </div>
 
 </div>
@@ -72,7 +73,7 @@
 
         function confirmLogout() {
         if (confirm("Are you sure you want to log out?")) {
-            window.location.href = "Login.html"; // Redirect to the login page
+            window.location = "login";
         }
     }
 
