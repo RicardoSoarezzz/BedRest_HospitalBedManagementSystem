@@ -9,13 +9,13 @@ BEGIN
 
 	SET @DID = (SELECT D_id FROM inserted)
 
-	SET @DAV = (SELECT D_available FROM inserted WHERE D_id = @DID) 
+	SET @DAV = (SELECT D_capacity FROM inserted WHERE D_id = @DID)
 
 	SET @DOC = (SELECT D_occupied FROM inserted WHERE D_id = @DID) 
 
 	IF(@DAV	>= @DOC)
 	BEGIN
-	UPDATE Department SET D_available = @DAV
+	UPDATE Department SET D_capacity = @DAV
 	WHERE D_id = @DID 
 
 	UPDATE Department SET D_occupied = @DOC
