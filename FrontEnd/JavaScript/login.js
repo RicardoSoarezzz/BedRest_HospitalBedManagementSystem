@@ -15,19 +15,19 @@ function validate() {
 
     if (username === adminUsername && password === adminPassword) {
         alert("Login successfully");
-        window.location.href = "/menuadmin";
+        window.location = "/menu-admin";
         return false;
     } else if(username === managerUsername && password === managerPassword){
         alert("Login successfully");
-        window.location = "gestao.html";
+        window.location = "gestao";
         return false;
     }else if(username === supportUsername && password === supportPassword){
              alert("Login successfully");
-             window.location = "manutencao.html";
+             window.location = "manutencao";
              return false;
     }else if(username === baseUsername && password === basePassword){
              alert("Login successfully");
-             window.location = "basico.html";
+             window.location = "basico";
              return false;
     }else {
 

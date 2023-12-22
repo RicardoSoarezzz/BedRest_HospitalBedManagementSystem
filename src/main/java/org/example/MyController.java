@@ -45,6 +45,16 @@ public class MyController {
 
     }
 
+
+    @RequestMapping("/manutencao")
+    public ModelAndView getMenuManutencao() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("manutencao");
+        return modelAndView;
+
+    }
+
+
     @RequestMapping("/basico")
     public ModelAndView getMenuBase() {
         ModelAndView modelAndView = new ModelAndView();
