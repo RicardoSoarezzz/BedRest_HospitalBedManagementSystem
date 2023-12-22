@@ -6,7 +6,37 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TableBuilder {
+    public static String buildOccupationRate(){
+        String htmlTable = "<table class=\"w3-table-all w3-centered\" border='1'>";
+        htmlTable += "<thead><tr>";
+        htmlTable += "<th>" + "Department" + "</th>";
+        htmlTable += "<th>" + "Occupation" + "</th>";
+        htmlTable += "<th>" + "Capacity" + "</th>";
+        htmlTable += "<th>" + "Occupation Rate (%)" + "</th>";
+        htmlTable += "</tr></thead>";
 
+        try (Connection connection = DatabaseConnection.connection();
+             PreparedStatement statement = connection.prepareCall("{CALL occupation_rate}")) {
+
+            ResultSet resultSet = statement.executeQuery();
+            int columnCount = resultSet.getMetaData().getColumnCount();
+
+            while (resultSet.next()) {
+                htmlTable += "<tr>";
+                for (int i = 1; i <= columnCount; i++) {
+                    htmlTable += "<td>" + resultSet.getString(i) + "</td>";
+                    System.out.println(resultSet.getString(i));
+                }
+                htmlTable += "</tr>";
+            }
+
+            htmlTable += "</table>";
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return htmlTable;
+    }
     public static String buildBedsTable() {
         String htmlTable = "<table class=\"w3-table-all w3-hoverable w3-centered\" border='1'>";
         htmlTable += "<thead><tr>";
@@ -28,7 +58,11 @@ public class TableBuilder {
             while (resultSet.next()) {
                 htmlTable += "<tr>";
                 for (int i = 1; i <= columnCount; i++) {
-                    htmlTable += "<td>" + resultSet.getString(i) + "</td>";
+                    String string = resultSet.getString(i);
+                    if(string == null){
+                        string = "on going";
+                    }
+                    htmlTable += "<td>" + string + "</td>";
                 }
                 htmlTable += "</tr>";
             }

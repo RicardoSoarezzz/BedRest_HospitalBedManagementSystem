@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <script src="index2.js"> </script>
+    <script src="/js/index.js"> </script>
     <style>
         .w3-theme {color:#fff !important;background-color:#00BFFF !important}
         .w3-btn {background-color:#4CAF50;margin-bottom:4px}
@@ -16,14 +16,14 @@
 </head>
 <body>
 
-<div class="w3-container w3-padding-16">
+<div class="w3-container w3-padding-16" id="div">
     <h2>Statistics and Reports</h2>
-    <button class="w3-btn w3-theme" onclick="openTab('OccupiedBeds')">Occupied Beds</button>
-    <button class="w3-btn w3-theme" onclick="openTab('VacantBeds')">Vacant Beds</button>
-    <button class="w3-btn w3-theme" onclick="openTab('OccupancyRate')">Occupancy Rate</button>
-    <button class="w3-btn w3-theme" onclick="openTab('AdmissionToInternmentTime')">Admission to Internment Time</button>
+    <!--<button class="w3-btn w3-theme" onclick="openTab('OccupiedBeds')">Occupied Beds</button>
+    <button class="w3-btn w3-theme" onclick="openTab('VacantBeds')">Vacant Beds</button>-->
+    <button class="w3-btn w3-theme" onclick="loadHtml('div','REPORT','occupationRate')">Occupancy Rate</button>
+    <!--<button class="w3-btn w3-theme" onclick="openTab('AdmissionToInternmentTime')">Admission to Internment Time</button>
     <button class="w3-btn w3-theme" onclick="openTab('OccupationTime')">Occupation Time</button>
-    <button class="w3-btn w3-theme" onclick="openTab('DischargeTime')">Discharge Time</button>
+    <button class="w3-btn w3-theme" onclick="openTab('DischargeTime')">Discharge Time</button>-->
 </div>
 
 

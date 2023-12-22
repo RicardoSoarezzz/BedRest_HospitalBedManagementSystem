@@ -191,4 +191,9 @@ public class MyController {
     {
         return TableBuilder.buildBedsTable();
     }
+
+    @RequestMapping("/REPORT/occupationRate")
+    public String getOccupationRate(){
+        return TableBuilder.buildOccupationRate();
+    }
 }

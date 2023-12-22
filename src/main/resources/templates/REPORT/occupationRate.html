@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="showOccupationRate()">
+<div id="occupationRate"></div>
+</body>
+</html>
+
+<script>
+    function showOccupationRate(){
+        fetch('/occupationRate')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('occupationRate').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            })
+    }
+</script>
