@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TableBuilder {
+    public TableBuilder(){}
 
     public static String buildBedsTable() {
         String htmlTable = "<table class=\"w3-table-all w3-hoverable w3-centered\" border='1'>";
