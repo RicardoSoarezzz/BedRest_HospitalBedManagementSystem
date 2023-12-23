@@ -16,7 +16,7 @@ public class MyController {
 
 
     @RequestMapping("/login")
-    public ModelAndView getlogin() {
+    public ModelAndView getLogin() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
         return modelAndView;
