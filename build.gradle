@@ -33,6 +33,7 @@ dependencies {
     implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc_auth', version: '12.2.0.x64'
     // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
     implementation group: 'org.springframework', name: 'spring-jdbc', version: '6.1.0'
+    testImplementation project(path: ':')
 }
 
 tasks.named('test') {
