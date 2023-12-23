@@ -1,16 +1,9 @@
 package org.example;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
-import java.util.Map;
 
 @RestController
 public class MyController {
@@ -192,7 +185,7 @@ public class MyController {
     ////////////////////////////////////////////////////////////////////
 
     @RequestMapping("/USER/userTable")
-    public String hello()
+    public String getUsersTable()
     {
         return TableBuilder.buildUserTable();
     }
