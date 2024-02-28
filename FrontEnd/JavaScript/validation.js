@@ -3,8 +3,7 @@ loginForm.addEventListener('submit', validateLoginForm);
 
 function validateEmail(username) {
     // Use a regular expression to check if the email is valid
-    const emailRegex = /^[0-9]+;
-    return emailRegex.test(username);
+    return /^[0-9]+/.test(username);
 }
 
 function validatePassword(password) {

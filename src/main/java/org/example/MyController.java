@@ -1,16 +1,9 @@
 package org.example;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
-import java.util.Map;
 
 @RestController
 public class MyController {
@@ -23,7 +16,7 @@ public class MyController {
 
 
     @RequestMapping("/login")
-    public ModelAndView getlogin() {
+    public ModelAndView getLogin() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
         return modelAndView;
@@ -44,6 +37,16 @@ public class MyController {
         return modelAndView;
 
     }
+
+
+    @RequestMapping("/manutencao")
+    public ModelAndView getMenuManutencao() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("manutencao");
+        return modelAndView;
+
+    }
+
 
     @RequestMapping("/basico")
     public ModelAndView getMenuBase() {
@@ -134,7 +137,7 @@ public class MyController {
 
 
     ////////////////////////////////////////////////////////////////////
-    //BED
+    //DEPARTMENT
     @RequestMapping("/DEPARTMENT/add")
     public ModelAndView getAddDEP() {
         ModelAndView modelAndView = new ModelAndView();
@@ -181,8 +184,10 @@ public class MyController {
     }
     ////////////////////////////////////////////////////////////////////
 
+    ///////////////////////////////////////////////////////////////////
+    //TABLES
     @RequestMapping("/USER/userTable")
-    public String hello()
+    public String getUsersTable()
     {
         return TableBuilder.buildUserTable();
     }
@@ -194,6 +199,6 @@ public class MyController {
 
     @RequestMapping("/REPORT/occupationRate")
     public String getOccupationRate(){
-        return TableBuilder.buildOccupationRate();
+        return TableBuilder.buildOccupacyRate();
     }
 }

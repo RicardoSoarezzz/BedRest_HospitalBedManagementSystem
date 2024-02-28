@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TableBuilder {
-    public static String buildOccupationRate(){
+    public static String buildOccupacyRate(){
         String htmlTable = "<table class=\"w3-table-all w3-centered\" border='1'>";
         htmlTable += "<thead><tr>";
         htmlTable += "<th>" + "Department" + "</th>";
