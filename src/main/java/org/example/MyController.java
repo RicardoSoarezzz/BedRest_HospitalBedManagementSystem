@@ -137,7 +137,7 @@ public class MyController {
 
 
     ////////////////////////////////////////////////////////////////////
-    //BED
+    //DEPARTMENT
     @RequestMapping("/DEPARTMENT/add")
     public ModelAndView getAddDEP() {
         ModelAndView modelAndView = new ModelAndView();
@@ -184,6 +184,8 @@ public class MyController {
     }
     ////////////////////////////////////////////////////////////////////
 
+    ///////////////////////////////////////////////////////////////////
+    //TABLES
     @RequestMapping("/USER/userTable")
     public String getUsersTable()
     {
@@ -197,6 +199,6 @@ public class MyController {
 
     @RequestMapping("/REPORT/occupationRate")
     public String getOccupationRate(){
-        return TableBuilder.buildOccupationRate();
+        return TableBuilder.buildOccupacyRate();
     }
 }
