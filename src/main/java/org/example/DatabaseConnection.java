@@ -2,7 +2,7 @@ package org.example;
 
 import java.sql.*;
 public class DatabaseConnection {
-    private static final String JDBC_URL = "jdbc:sqlserver://TIAGO-DESKTOP\\SQL_43431:1434;database=QS_Gestao_Camas;integratedSecurity=true;encrypt=true;trustServerCertificate=true";
+    private static final String JDBC_URL = "jdbc:sqlserver://LAPTOP-JC\\JC_SQLEXPRESS:1434;database=QS_Gestao_Camas;integratedSecurity=true;encrypt=true;trustServerCertificate=true";
     public static CallableStatement callableStatement;
 
     public static Connection connection() throws SQLException {
